@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation platform('org.junit:junit-bom:5.11.1')
+    implementation 'org.junit.jupiter:junit-jupiter-api'
+
+    implementation("org.seleniumhq.selenium:selenium-java:4.30.0"){
+    }
+    implementation("io.github.bonigarcia:webdrivermanager:6.0.0"){
+    }
+
+    implementation("io.cucumber:cucumber-java:7.21.1")
+    testImplementation("io.cucumber:cucumber-junit:7.21.1")
+
+}
+
+test {
+    useJUnitPlatform()
+}
