@@ -36,6 +36,7 @@ public class WindowHandler {
 				.orElseThrow(() -> new RuntimeException("No new windows found"));
 
 		driver.switchTo().window(newWindow);
+		
 	}
 
 

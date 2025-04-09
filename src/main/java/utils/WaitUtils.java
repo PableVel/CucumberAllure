@@ -50,7 +50,7 @@ public class WaitUtils {
 				.withTimeout(Duration.ofSeconds(10))
 				.pollingEvery(Duration.ofMillis(200))
 				.ignoring(Exception.class);
-
+		//Buscar exception de windows handler
 		fluentWait.until(driver -> ((JavascriptExecutor) driver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
